@@ -2,6 +2,7 @@
 // ========================================================
 import { Text } from "react-native";
 import { useAccount } from "wagmi";
+import { styles } from "../App";
 
 // Component
 // ========================================================
@@ -14,7 +15,10 @@ export default function Acount() {
 
   return (
     <>
-      <Text style={{ marginBottom: 24 }}>{address}</Text>
+      <Text style={styles.textLabel}>Wallet Address</Text>
+      <Text numberOfLines={1} style={styles.textCode}>
+        {address}
+      </Text>
     </>
   );
 }

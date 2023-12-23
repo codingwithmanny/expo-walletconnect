@@ -2,6 +2,7 @@
 // ========================================================
 import { Text } from "react-native";
 import { useNetwork, useAccount } from "wagmi";
+import { styles } from "../App";
 
 // Component
 // ========================================================
@@ -15,8 +16,10 @@ export default function Network() {
 
   return (
     <>
-      <Text style={{ marginBottom: 24 }}>{chain?.name}</Text>
-      <Text style={{ marginBottom: 24 }}>{chain?.id}</Text>
+      <Text style={styles.textLabel}>Network</Text>
+      <Text style={styles.textCode}>{chain?.name}</Text>
+      <Text style={styles.textLabel}>Chain ID</Text>
+      <Text style={styles.textCode}>{chain?.id}</Text>
     </>
   );
 }
